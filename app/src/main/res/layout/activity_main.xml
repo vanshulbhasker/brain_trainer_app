@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vanshul.btrainer.MainActivity">
+
+    <TextView
+        android:id="@+id/hi1"
+        android:layout_width="304dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="5dp"
+        android:text="Rules: you will be presented with a basic math equation and 4 options ,lets see how much you can score in 30 seconds."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="145dp"
+        android:layout_height="128dp"
+        android:onClick="strt"
+        android:text="GO!!!!"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/hi2"
+        android:layout_width="261dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="49dp"
+        android:text="Hit go to start your timer"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="172dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="455dp"
+            android:layout_marginTop="25dp"
+            android:text="eqn"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="121dp"
+            android:layout_marginTop="45dp"
+            android:onClick="reset"
+            android:text="RESET"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="73dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="440dp"
+            android:layout_marginTop="23dp"
+            android:background="@android:color/holo_red_light"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="SCORE: 0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="348dp"
+            android:layout_height="186dp"
+            android:layout_marginBottom="171dp"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv3">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="173dp"
+                android:layout_height="92dp"
+                android:background="@android:color/holo_orange_dark"
+                android:onClick="clk"
+                android:tag="0"
+                android:text="1"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="173dp"
+                android:layout_height="92dp"
+                android:background="@android:color/holo_blue_bright"
+                android:onClick="clk"
+                android:tag="1"
+                android:text="2"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="173dp"
+                android:layout_height="92dp"
+                android:background="@android:color/holo_green_light"
+                android:onClick="clk"
+                android:tag="2"
+                android:text="3"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="173dp"
+                android:layout_height="92dp"
+                android:background="@android:color/holo_purple"
+                android:onClick="clk"
+                android:tag="3"
+                android:text="4"
+                android:textSize="34sp" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="59dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="447dp"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/holo_blue_bright"
+            android:padding="10dp"
+            android:text="30"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
